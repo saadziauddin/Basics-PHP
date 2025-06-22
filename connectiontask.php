@@ -1,29 +1,22 @@
 <?php
-// $connect = mysqli_connect('localhost','root','','04g02g') OR die(mysqli_error());
+    // $host = 'localhost';
+    // $db = 'basics_sir';
+    // $user = 'root';
+    // $pass = '';
 
-// // if($connect){
-// //     echo "Connection Successfull";
-// // }
+    $host = 'sql100.infinityfree.com';
+    $db = 'if0_39277637_basics_sir';
+    $user = 'if0_39277637';
+    $pass = 'Saad8058';
 
-// $fetchData = mysqli_query($connect,"select * from user");
-// // print_r($fetchData);
+    $connect = mysqli_connect($host, $user, $pass, $db);
+    // if (!$connect) {
+    //     die("Connection failed: " . mysqli_connect_error());
+    // } else {
+    //     echo "Connection successful!";
+    // }
 
-// // $finalData = mysqli_fetch_Assoc($fetchData);
-// // print_r($finalData);
-
-// while($finalData = mysqli_fetch_Assoc($fetchData)){
-//     echo $finalData['StudentName'];
-//     echo $finalData['Email'];
-//     echo $finalData['Password'];
-//     echo $finalData['StudentStatus'];
-//     echo $finalData['country'];
-// }
-?>
-
-<?php
-$connect = mysqli_connect('localhost','root','','basics_sir') OR die(mysqli_error());
-
-$fetchData = mysqli_query($connect,"select * from user");
+    $fetchData = mysqli_query($connect,"select * from user");
 ?>
 
 <br><center><h2>User Table Data</h2>
